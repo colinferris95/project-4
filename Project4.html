@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<!-- The Maze Game
+Developed for class CMPT 120L 200
+October 21 2014 -->
+<head>
+  <meta charset="utf-8">
+  <title>Kayla Orlando; CMPT 120L-200; Project 3</title>
+      <h1><center> Mission Two</h1>
+  
+<script type="text/javascript" src="location.js">
+
+</script> 
+
+<script>
+
+
+function updateDisplay (message){
+	document.getElementById("description").innerHTML += (message += " ");
+	}
+   
+function userCommands () {
+	var command = document.getElementById("userInput").value;
+	if (command == "N" || command == "n") {
+ 		moveNorth();
+	} else if (command == "W" || command == "w") {
+		moveWest();
+	} else if (command == "E" || command == "e") {
+		moveEast();
+	} else if (command == "S" || command == "s") {
+		moveSouth();
+	}
+}
+
+function buttonUpdate (){
+	if(position == 3){
+		document.getElementById("South").style.display = "none";
+	}
+}
+
+</script>    
+  
+</head>
+
+<body onload="init();">
+
+<center>
+
+<textarea id="description" rows="8" cols="50">
+
+</textarea>  
+   
+<p>   
+Button Control:
+    <button onclick="moveNorth();" id="North"> North </button>  
+    <button onclick="moveSouth();" id="South"> South </button> 
+    <button onclick="moveEast();" id="East"> East </button> 
+    <button onclick="moveWest();" id="West"> West </button>
+    <button onclick="takeItem();" id="Take"> take </button>
+	<!-- click button movement -->
+</p>
+<p>
+Keyboard Control: 
+    <input type="text" name="userInput" id="userInput"/>
+    <button onclick="userCommands()" id="infoBox">Go</button>
+	<!-- type button movement -->
+</p>  
+<p>   
+  
+Have any questions? To email the  <a href = "mailto:kayla.orlando1@marist.edu"> programmer</a>, click the link.
+
+</p>
+</center>
+</body>
+</html>
+
